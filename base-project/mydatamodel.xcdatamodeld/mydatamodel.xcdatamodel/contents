@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1811" systemVersion="11G63" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Shout" representedClassName="Shout" syncable="YES">
+        <attribute name="createddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shoutId" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="sm_owner" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+    </entity>
+    <entity name="User" representedClassName="User" syncable="YES">
+        <attribute name="pic" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="whispers" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Whisper" inverseName="user" inverseEntity="Whisper" syncable="YES"/>
+    </entity>
+    <entity name="Whisper" representedClassName="Whisper" syncable="YES">
+        <attribute name="createddate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="whisperId" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="user" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="User" inverseName="whispers" inverseEntity="User" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Shout" positionX="-182" positionY="-36" width="128" height="120"/>
+        <element name="User" positionX="27" positionY="72" width="128" height="90"/>
+        <element name="Whisper" positionX="-182" positionY="117" width="128" height="120"/>
+    </elements>
+</model>
