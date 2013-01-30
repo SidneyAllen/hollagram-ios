@@ -128,6 +128,7 @@
 }
 
 - (void) clearWhisperArray {
+    self.navigationItem.leftBarButtonItem = nil;
     self.whipserArray = nil;
 }
 

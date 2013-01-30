@@ -13,8 +13,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "76"
          endingLineNumber = "76"
-         landmarkName = "@implementation ShoutViewController"
-         landmarkType = "3">
+         landmarkName = "-submitLogout:"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"

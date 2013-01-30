@@ -63,9 +63,7 @@
 
 - (IBAction)createUser:(id)sender {
     
-    NSManagedObjectContext *context = [[self.appDelegate coreDataStore] contextForCurrentThread];
-    
-    User *newUser = [[User alloc] initIntoManagedObjectContext:context];
+    User *newUser = [[User alloc] initIntoManagedObjectContext:self.managedObjectContext];
      
     [newUser setValue:self.picData forKey:@"pic"];
     [newUser setValue:self.usernameField.text forKey:[newUser primaryKeyField]];

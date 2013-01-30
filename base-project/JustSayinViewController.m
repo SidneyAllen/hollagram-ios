@@ -183,6 +183,7 @@
                 }];
                 
             } else {
+                
                 NSManagedObject *newManagedObject = [NSEntityDescription insertNewObjectForEntityForName:@"Shout" inManagedObjectContext:self.managedObjectContext];
                 
                 [newManagedObject setValue:self.messageField.text forKey:@"desc"];
