@@ -183,7 +183,13 @@
                     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
                     if (cell)
                     {
+                        cell.textLabel.frame = CGRectMake(90, 10, 300, 30);
+                        cell.detailTextLabel.frame = CGRectMake(90, 40, 300, 50);
+
+                        cell.imageView.contentMode = UIViewContentModeScaleAspectFit;
+                        [cell.imageView setFrame:CGRectMake(0,0,80,80)];
                         cell.imageView.image = image;
+                    
                     }
                     
                 });

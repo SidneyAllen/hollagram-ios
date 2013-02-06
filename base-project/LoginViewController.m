@@ -84,15 +84,16 @@
     [self.usernameField resignFirstResponder];
     [self.passwordField resignFirstResponder];
     
-    [self.client loginWithUsername:self.usernameField.text password:self.passwordField.text onSuccess:^(NSDictionary *results) {
+    [self.client loginWithUsername:self.usernameField.text password:self.passwordField.text
+                         onSuccess:^(NSDictionary *results) {
         
-        [self.usernameField setText:@""];
-        [self.passwordField setText:@""];
-        
-        [self dismissModalViewControllerAnimated:YES];
-    } onFailure:^(NSError *error) {
-        NSLog(@"Login Fail: %@",error);
-    }];
+                             [self.usernameField setText:@""];
+                             [self.passwordField setText:@""];
+                             [self dismissModalViewControllerAnimated:YES];
+                         } onFailure:^(NSError *error) {
+                             NSLog(@"Login Fail: %@",error);
+                         }
+     ];
 }
 - (void)viewDidUnload {
     [self setUsernameField:nil];
