@@ -171,6 +171,7 @@
                     
                     // SAVE WHISPER and RELATIONSHIPS
                     [self.managedObjectContext saveOnSuccess:^{
+                         NSLog(@"New Whisper!");
                         [self.messageField setText:@""];
                         [self.urlField setText:@""];
                         [self.usernameField setText:@""];
@@ -190,7 +191,7 @@
                 [newManagedObject setValue:[newManagedObject assignObjectId] forKey:[newManagedObject primaryKeyField]];
                 
                 [self.managedObjectContext saveOnSuccess:^{
-
+                     NSLog(@"New Shout!");
                     [self.messageField setText:@""];
                     [self.urlField setText:@""];
                     [self.usernameField setText:@""];

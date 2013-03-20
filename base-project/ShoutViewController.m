@@ -106,6 +106,7 @@
     [fetchRequest setSortDescriptors:sortDescriptors];
  
     [self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
+         NSLog(@"Fetch all shouts!");
         self.shoutArray = results;
         [self.tableView reloadData];
     } onFailure:^(NSError *error) {

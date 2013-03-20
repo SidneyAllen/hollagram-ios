@@ -149,6 +149,7 @@
     [fetchRequest setSortDescriptors:sortDescriptors];
     
     [self.managedObjectContext executeFetchRequest:fetchRequest onSuccess:^(NSArray *results) {
+         NSLog(@"Fetch all whispers!");
         self.whipserArray = results;
         [self.myTableView reloadData];
     } onFailure:^(NSError *error) {

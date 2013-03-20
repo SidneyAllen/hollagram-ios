@@ -11,7 +11,6 @@
 
 @implementation AppDelegate
 
-
 @synthesize client = _client;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize coreDataStore = _coreDataStore;
@@ -19,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    self.client = [[SMClient alloc] initWithAPIVersion:@"0"  publicKey:@"YOUR_PUBLIC_API_KEY"];
+    self.client = [[SMClient alloc] initWithAPIVersion:@"0"  publicKey:@"YOUR_PUBLIC_KEY"];
     
     SM_CACHE_ENABLED = YES;
     

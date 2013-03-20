@@ -70,6 +70,7 @@
     [newUser setPassword:self.passwordField.text];
     
     [self.managedObjectContext saveOnSuccess:^{
+         NSLog(@"New User created!");
         [self loginUser];
 
     } onFailure:^(NSError *error) {
@@ -111,7 +112,7 @@
 
 - (void)loginUser {
     [self.client loginWithUsername:self.usernameField.text password:self.passwordField.text onSuccess:^(NSDictionary *results) {
-    
+         NSLog(@"User logged in!");
         [self.usernameField setText:@""];
         [self.passwordField setText:@""];
         
