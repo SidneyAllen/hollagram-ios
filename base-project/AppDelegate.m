@@ -18,7 +18,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    self.client = [[SMClient alloc] initWithAPIVersion:@"0"  publicKey:@"YOUR_PUBLIC_KEY"];
+    self.client = [[SMClient alloc] initWithAPIVersion:@"0"  publicKey:@"755da514-1dc6-4f6c-a262-afb508dc52df"];
     
     SM_CACHE_ENABLED = YES;
     

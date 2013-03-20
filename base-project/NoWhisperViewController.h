@@ -14,10 +14,12 @@
 @interface NoWhisperViewController : UIViewController <UITableViewDelegate>
 
 @property (strong, nonatomic) NSManagedObjectContext *managedObjectContext;
+@property (weak, nonatomic) IBOutlet UIView *myView;
 
 @property (strong, nonatomic) SMClient *client;
-@property (strong, nonatomic) UITableView  *myTableView;
-@property (strong, nonatomic) UIView  *myView;
+
+@property (strong, nonatomic) IBOutlet UITableView *myTableView;
+
 
 @property (strong, nonatomic) NSArray  *whipserArray;
 

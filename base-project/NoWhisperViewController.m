@@ -65,10 +65,12 @@
     [super viewDidAppear:animated];
     
     if([self.client isLoggedIn]) {
+        NSLog(@"Is logged in");
         [self.myView setHidden:YES];
         [self.myTableView setHidden:NO];
         
     } else {
+        NSLog(@"Not logged in");
         [self.myView setHidden:NO];
         [self.myTableView setHidden:YES];
     }
@@ -104,6 +106,7 @@
 }
 
 - (void)viewDidUnload {
+
     [super viewDidUnload];
     [self setMyTableView:nil];
     [self setMyView:nil];

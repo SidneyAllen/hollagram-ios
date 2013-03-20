@@ -185,6 +185,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Whispers" id="Qbl-32-4oh"/>
                     <navigationItem key="navigationItem" title="Hollagram" id="DVE-lm-wdF"/>
+                    <connections>
+                        <outlet property="myTableView" destination="154-3Q-g7E" id="ERA-tj-wix"/>
+                        <outlet property="myView" destination="IQE-ba-ANq" id="hGw-lx-ZOn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ilD-Ky-pMH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -432,46 +436,6 @@
     <resources>
         <image name="Default-568h@2x.png" width="640" height="1136"/>
     </resources>
-    <classes>
-        <class className="JustSayinViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/JustSayinViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="postMessage:"/>
-                <relationship kind="outlet" name="messageField" candidateClass="UITextView"/>
-                <relationship kind="outlet" name="urlField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="LoginViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LoginViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelLogin:"/>
-                <relationship kind="action" name="loginUser:"/>
-                <relationship kind="action" name="signupModal:"/>
-                <relationship kind="outlet" name="loginButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
-                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-        <class className="NoWhisperViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/NoWhisperViewController.h"/>
-        </class>
-        <class className="ShoutViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/ShoutViewController.h"/>
-        </class>
-        <class className="SignupViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignupViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="cancelLogin:"/>
-                <relationship kind="action" name="createUser:"/>
-                <relationship kind="action" name="uploadPhoto:"/>
-                <relationship kind="outlet" name="passwordField" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="profileImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="usernameField" candidateClass="UITextField"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
